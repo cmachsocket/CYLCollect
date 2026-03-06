@@ -7,7 +7,7 @@ unzip:
 	python unzip_in_folder.py ..
 
 delete:
-	cd .. && find . -type f ! \( -name '*.xls' -o -name '*.xlsx' -o -name '*.doc' -o -name '*.docx' -o -name '*.zip' -o -name '*.rar' \) -delete   
+	cd .. && find .  -mindepth 1 -maxdepth 1 -type f ! \( -name '*.xls' -o -name '*.xlsx' -o -name '*.doc' -o -name '*.docx' -o -name '*.zip' -o -name '*.rar' \) -delete   
 classify:
 	python classify_md_by_name.py .. --move
 
